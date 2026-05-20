@@ -1,0 +1,4 @@
+baseURL = 'https://localhost:1313/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = 'hugo-texify3'
