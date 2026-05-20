@@ -1,6 +1,6 @@
 baseURL = 'https://localhost:1313/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+locale = 'ja'
+title = 'コレクトコネクト'
 theme = 'hugo-texify3'
 
 [caches]
