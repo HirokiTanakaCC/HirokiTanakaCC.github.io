@@ -1,7 +1,7 @@
-baseURL = 'https://localhost:1313/'
+baseURL = 'https://www.correct-connect.jp'
 locale = 'ja'
 title = 'コレクトコネクト'
-theme = 'hugo-texify3'
+theme = 'hugo-texify'
 
 [caches]
   [caches.images]
