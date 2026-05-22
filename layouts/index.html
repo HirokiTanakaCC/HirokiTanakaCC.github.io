@@ -1,0 +1,32 @@
+{{ define "head" }}
+{{ $options := dict "transpiler" "dartsass" "targetPath" "css/index.css" }}
+{{ with resources.Get "sass/layouts/index.scss" | toCSS $options | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
+{{ end }}
+
+{{ define "main" }}
+
+    <div id="content" class="index">
+        {{ with .Site.GetPage "_index.md" }}
+            {{ .Content }}
+        {{ end }}
+    </div>
+    <section class="works-section">
+      <h2>制作実績</h2>
+      <div class="works-grid">
+        {{ range first 12 (where site.RegularPages "Section" "works") }}
+        <article class="work-card">
+          <img src="{{ .Params.cover }}" alt="{{ .Title }}">
+          <div class="work-body">
+            <h3>{{ .Title }}</h3>
+            <p>
+              {{ .Params.publisher }}<br>
+              {{ .Params.publish_date }}刊／{{ .Params.edition }}
+            </p>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+
+{{ end }}

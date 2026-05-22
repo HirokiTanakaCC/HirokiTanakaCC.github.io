@@ -6,3 +6,6 @@ theme = 'hugo-texify'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[params]
+  customCSS = ["css/custom.css"]
