@@ -1,0 +1,11 @@
+{{ $parsedUrl := urls.Parse .Site.BaseURL }}
+{{ $domain := $parsedUrl.Host }}
+{{ $domainWithoutWWW := replace $domain "www." "" }}
+<header id="header">
+  <h1>
+    <a href="{{ .Site.BaseURL }}">コレクトコネクト</a>
+  </h1>
+  組版・校正・Web制作
+
+</header>
+<hr class="head-rule"></hr>

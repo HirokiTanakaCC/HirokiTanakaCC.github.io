@@ -1,6 +1,6 @@
 baseURL = 'https://www.correct-connect.jp'
 locale = 'ja'
-title = 'コレクトコネクト'
+title = 'コレクトコネクト｜組版・校正・Web制作'
 theme = 'hugo-texify'
 
 [caches]
